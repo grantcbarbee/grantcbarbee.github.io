@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Grant Barbee &mdash; Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aos.min.css">
+    <link rel="stylesheet" href="css/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <div class="js-animsition animsition" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
+
+    <header class="templateux-navbar"  data-aos="fade-down">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-3"><div class="site-logo"><a href="index.html" class="animsition-link">Grant Barbee</a></div></div>
+          <div class="col-sm-9 col-9 text-right">
+
+            <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+
+            <nav class="templateux-menu js-templateux-menu" role="navigation">
+              <ul class="list-unstyled">
+                <li class="d-md-none d-block"><a href="index.html" class="animsition-link">Home</a></li>
+                <li><a href="index.html" class="animsition-link">Portfolio</a></li>
+                <li><a href="contact.html" class="animsition-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- END templateux-navbar -->
+    <section class="templateux-hero"  data-scrollax-parent="true">
+      <!-- <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="images/hero_2.jpg" /></div> -->
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center intro">
+          <div class="col-md-10" data-aos="fade-up">
+            <h1>Culinary Domination</h1>
+
+            <a href="#next" class="go-down js-smoothscroll"></a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END templateux-hero -->
+
+
+    <section class="templateux-portfolio-overlap mb-5" id="next">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="row work-detail">
+              <div class="col-md-4 ">
+                <span class=caption>Role</span>
+                <strong>Programmer</strong>
+              </div>
+              <div class="col-md-4">
+                <span class=caption>Team</span>
+                <strong>15 Members</strong>
+              </div>
+              <div class="col-md-4">
+                <span class=caption>Tools</span>
+                <strong>Unity3D, C#</strong>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="text-left mb-5">
+                <p>I worked on Culinary Domination as part of a course called Game Lab. In this course, teams are formed of students with diverse skillsets and tasked with developing a student-pitched game concept over the span of a semester.
+                  I was one of three programmers for the project. I contributed to many of the game's systems, but one of the issues I was personally tasked with was implementing procedural generation for our game world.</p>
+              </div>
+            </div>
+
+
+            <p class="text-center mb-5"><img src="images/culidom.gif" alt="Gameplay" class="img-fluid"></p>
+
+            <div class="row mb-5">
+              <div class="text-left mb-5">
+                <p>In the end, I found Voronoi diagrams to be quite useful in modelling the city. Doing so gave me the conceptual tools of cells, which could have values assigned to them and be interpolated between.
+                Additionally, whenever the designers requested city districts to be added to the game, it was easily accomplished by overlaying a second Voronoi diagram with larger cells. Below is a quick runthrough of how the city is generated.</p>
+              </div>
+            </div>
+
+
+            <p class="text-center mb-5"><img src="images/PrimarySideBySide.png" alt="Primary Voronoi" class="img-fluid"></p>
+
+            <div class="text-left mb-5">
+              <p>Here is an example of the primary diagram mapped to a 2D texture. For this implementation, I divided the diagram into a grid and restricted it to one cell center per grid (Pictured on right). This simplifies storage as well as sampling from the diagram and generally ensures an even distribution of cells.
+              In the final implementation, each cell is assigned an urbanization value which is used to determine various aspects of the tile that will eventually go there, including population density and visuals.</p>
+            </div>
+
+            <p class="text-center mb-5"><img src="images/SecondarySideBySide.png" alt="Secondary Voronoi" class="img-fluid"></p>
+
+            <div class="text-left mb-5">
+              <p>Here is an example of the secondary diagram, the one used to assign city districts. In order to give the map a more interesting shape than just a square, I padded it with an extra district on each side and cropped out any district touching the borders.
+                Also seen on the right, each district has a multiplier for the urbanization of tiles within it. Brighter areas represent an increase and darker areas a decrease.</p>
+            </div>
+
+            <p class="text-center mb-5"><img src="images/UrbanGrowth.gif" alt="Urban Simulation" class="img-fluid"></p>
+
+            <div class="text-left mb-5">
+              <p>Next, the city center is grown by selecting a cell near the middle to have a high urbanization value and allowing it to bleed out to surrounding cells. About 20 ticks of this simulation are run, with auxiliary city centers added throughout the process to give the city more shape.</p>
+            </div>
+
+            <p class="text-center mb-5"><img src="images/CombinedSideBySide.png" alt="Combined" class="img-fluid"></p>
+
+            <div class="text-left mb-5">
+              <p>Here you can see the results of combining the two diagrams. On the right, the diagram is being sampled at the same resolution that the tile placement system will use.</p>
+            </div>
+
+            <p class="text-center mb-5"><img src="images/RoadsSideBySide.png" alt="Road Placement" class="img-fluid"></p>
+
+            <div class="text-left mb-5">
+              <p>The last map feature to assign is highways. To simplify the procedural part of the generation, I wrote a function to rasterize arbitratry lines onto the tile data. This resulted in some excess road tiles that needed to be cleaned up but massively simplified the process of describing how roads are allowed to be placed.</p>
+            </div>
+
+            <p class="text-center mb-5"><img src="images/Final-Top.png" alt="Final" class="img-fluid"></p>
+
+            <p class="text-center mb-5"><img src="images/Final-Iso.png" alt="Final" class="img-fluid"></p>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <footer class="templateux-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 text-md-left text-center">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="js/scripts-all.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
