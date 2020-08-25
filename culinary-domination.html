@@ -91,7 +91,7 @@
             </div>
 
 
-            <p class="text-center mb-5"><img src="images/culidom.gif" alt="Gameplay" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/culidom.gif" alt="Gameplay" class="img-fluid"></p>
 
             <div class="row mb-5">
               <div class="text-left mb-5">
@@ -101,41 +101,41 @@
             </div>
 
 
-            <p class="text-center mb-5"><img src="images/PrimarySideBySide.png" alt="Primary Voronoi" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/PrimarySideBySide.png" alt="Primary Voronoi" class="img-fluid"></p>
 
             <div class="text-left mb-5">
               <p>Here is an example of the primary diagram mapped to a 2D texture. For this implementation, I divided the diagram into a grid and restricted it to one cell center per grid (Pictured on right). This simplifies storage as well as sampling from the diagram and generally ensures an even distribution of cells.
               In the final implementation, each cell is assigned an urbanization value which is used to determine various aspects of the tile that will eventually go there, including population density and visuals.</p>
             </div>
 
-            <p class="text-center mb-5"><img src="images/SecondarySideBySide.png" alt="Secondary Voronoi" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/SecondarySideBySide.png" alt="Secondary Voronoi" class="img-fluid"></p>
 
             <div class="text-left mb-5">
               <p>Here is an example of the secondary diagram, the one used to assign city districts. In order to give the map a more interesting shape than just a square, I padded it with an extra district on each side and cropped out any district touching the borders.
                 Also seen on the right, each district has a multiplier for the urbanization of tiles within it. Brighter areas represent an increase and darker areas a decrease.</p>
             </div>
 
-            <p class="text-center mb-5"><img src="images/UrbanGrowth.gif" alt="Urban Simulation" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/UrbanGrowth.gif" alt="Urban Simulation" class="img-fluid"></p>
 
             <div class="text-left mb-5">
               <p>Next, the city center is grown by selecting a cell near the middle to have a high urbanization value and allowing it to average out to surrounding cells. About 20 ticks of this simulation are run, with auxiliary city centers added throughout the process to give the city more shape.</p>
             </div>
 
-            <p class="text-center mb-5"><img src="images/CombinedSideBySide.png" alt="Combined" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/CombinedSideBySide.png" alt="Combined" class="img-fluid"></p>
 
             <div class="text-left mb-5">
               <p>Here you can see the results of combining the two diagrams. On the right, the diagram is being sampled at the same resolution that the tile placement system will use.</p>
             </div>
 
-            <p class="text-center mb-5"><img src="images/RoadsSideBySide.png" alt="Road Placement" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/RoadsSideBySide.png" alt="Road Placement" class="img-fluid"></p>
 
             <div class="text-left mb-5">
               <p>The last map feature to assign is highways. To simplify this, I wrote a function to rasterize arbitratry lines onto the tile data. This resulted in some excess road tiles that needed to be cleaned up but massively simplified the process of describing how roads are allowed to be placed.</p>
             </div>
 
-            <p class="text-center mb-5"><img src="images/Final-Top.png" alt="Final" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/Final-Top.png" alt="Final" class="img-fluid"></p>
 
-            <p class="text-center mb-5"><img src="images/Final-Iso.png" alt="Final" class="img-fluid"></p>
+            <p class="text-center mb-5"><img src="images/culidom/Final-Iso.png" alt="Final" class="img-fluid"></p>
 
           </div>
 
